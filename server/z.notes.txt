@@ -1,0 +1,5 @@
+npx drizzle-kit generate -> cria sql para gerar tabela/migrations
+
+npx drizzle-kit migrate -> executa migrate
+
+npx drizzle-kit studio -> inicia o drizzle studio para gerenciar tabelas

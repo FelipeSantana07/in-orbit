@@ -1,0 +1,9 @@
+npm init -y
+
+npm typescript -D
+
+npx tsc --init
+
+npm i @types/node tsx -D
+
+npm i fastify -i
