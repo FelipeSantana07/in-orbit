@@ -22,22 +22,13 @@ type SummaryResponse = {
 export function App() {
   const [summary, setSummary] = useState<SummaryResponse | null>(null)
 
-  // useEffect(() => {
-  //   fetch('http://localhost:3333/summary')
-  //     .then(response => {
-  //       return response.json()
-  //     })
-  //     .then(data => {
-  //       setSummary(data.summary)
-  //     })
-  // }, [])
-
   const { data } = useQuery<SummaryResponse>({
     queryKey: ['summary'],
     queryFn: getSummary,
     staleTime: 1000 * 60,
   })
 
+  console.log(data)
   return (
     <Dialog>
       {data?.total && data.total > 0 ? <Summary /> : <EmptyGoals />}
